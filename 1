@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Опитування про робототехніку</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+  }
+  form {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  p {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .option {
+    display: block;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid #0077cc;
+    border-radius: 8px;
+    background: #e6f0ff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .option:hover {
+    background: #cce0ff;
+    transform: scale(1.02);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + label {
+    background: #0077cc;
+    color: white;
+    border-color: #005fa3;
+  }
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  button:hover {
+    background: #005fa3;
+  }
+</style>
+</head>
+<body>
+
+<form>
+  <!-- Питання 1 -->
+  <p>1. Як би ви охарактеризували своє ставлення до робототехніки в школі?</p>
+  <input type="radio" id="q1a" name="q1" value="active">
+  <label class="option" for="q1a">Я активно впроваджую робототехніку у свої уроки</label>
+
+  <input type="radio" id="q1b" name="q1" value="interested">
+  <label class="option" for="q1b">Мене цікавить, але ще не почала/почав</label>
+
+  <input type="radio" id="q1c" name="q1" value="neutral">
+  <label class="option" for="q1c">Нейтральне ставлення — робота без особливого акценту</label>
+
+  <input type="radio" id="q1d" name="q1" value="negative">
+  <label class="option" for="q1d">Негативно ставлюся — вважаю це марною темою</label>
+
+  <!-- Питання 2 -->
+  <p>2. Якщо б у вас була можливість вибору, ви б робили робототехніку:</p>
+  <input type="radio" id="q2a" name="q2" value="mandatory">
+  <label class="option" for="q2a">Обов’язковим елементом навчальної програми</label>
+
+  <input type="radio" id="q2b" name="q2" value="optional_club">
+  <label class="option" for="q2b">Лише факультативним гуртком</label>
+
+  <input type="radio" id="q2c" name="q2" value="for_interested">
+  <label class="option" for="q2c">Лише для зацікавлених учнів</label>
+
+  <input type="radio" id="q2d" name="q2" value="none">
+  <label class="option" for="q2d">Не робила/не робив би взагалі</label>
+
+  <!-- Питання 3 -->
+  <p>3. Що, на вашу думку, більше відштовхує вчителів від робототехніки?</p>
+  <input type="radio" id="q3a" name="q3" value="resources">
+  <label class="option" for="q3a">Складність у підготовці та ресурсах</label>
+
+  <input type="radio" id="q3b" name="q3" value="method_support">
+  <label class="option" for="q3b">Недостатня методична підтримка</label>
+
+  <input type="radio" id="q3c" name="q3" value="play_only">
+  <label class="option" for="q3c">Впевненість, що це «гра», а не навчання</label>
+
+  <input type="radio" id="q3d" name="q3" value="personal">
+  <label class="option" for="q3d">Особисте небажання змінювати стиль викладання</label>
+
+  <!-- Питання 4 -->
+  <p>4. Як ви реагуєте на ідею інтеграції робототехніки з програмуванням та STEM-проєктами?</p>
+  <input type="radio" id="q4a" name="q4" value="priority">
+  <label class="option" for="q4a">Це моя пріоритетна мета — роблю все можливе</label>
+
+  <input type="radio" id="q4b" name="q4" value="cautious">
+  <label class="option" for="q4b">Зацікавлена/зацікавлений, але обережно</label>
+
+  <input type="radio" id="q4c" name="q4" value="skeptical">
+  <label class="option" for="q4c">Скептично ставлюся — сумнівна користь</label>
+
+  <input type="radio" id="q4d" name="q4" value="against">
+  <label class="option" for="q4d">Категорично проти — вважаю зайвим</label>
+
+  <!-- Питання 5 -->
+  <p>5. Який головний ваш мотив для роботи з робототехнікою?</p>
+  <input type="radio" id="q5a" name="q5" value="motivate_students">
+  <label class="option" for="q5a">Підвищення мотивації та зацікавленості учнів</label>
+
+  <input type="radio" id="q5b" name="q5" value="self_development">
+  <label class="option" for="q5b">Розвиток власної компетентності та навичок</label>
+
+  <input type="radio" id="q5c" name="q5" value="program_requirement">
+  <label class="option" for="q5c">Виконання вимог адміністрації чи програми</label>
+
+  <input type="radio" id="q5d" name="q5" value="no_motivation">
+  <label class="option" for="q5d">Немає мотиву — це не для мене</label>
+
+  <button type="submit">Відправити</button>
+</form>
+
+</body>
+</html>
