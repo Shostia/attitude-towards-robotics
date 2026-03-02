@@ -57,83 +57,133 @@
   button:hover {
     background: #005fa3;
   }
+  #results {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  #results h3 {
+    margin-top: 0;
+  }
+  .stat {
+    margin: 5px 0;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
 
-<form>
-  <!-- Питання 1 -->
+<form id="surveyForm">
   <p>1. Як би ви охарактеризували своє ставлення до робототехніки в школі?</p>
-  <input type="radio" id="q1a" name="q1" value="active">
+  <input type="radio" id="q1a" name="q1" value="Я активно впроваджую робототехніку у свої уроки">
   <label class="option" for="q1a">Я активно впроваджую робототехніку у свої уроки</label>
 
-  <input type="radio" id="q1b" name="q1" value="interested">
+  <input type="radio" id="q1b" name="q1" value="Мене цікавить, але ще не почала/почав">
   <label class="option" for="q1b">Мене цікавить, але ще не почала/почав</label>
 
-  <input type="radio" id="q1c" name="q1" value="neutral">
+  <input type="radio" id="q1c" name="q1" value="Нейтральне ставлення — робота без особливого акценту">
   <label class="option" for="q1c">Нейтральне ставлення — робота без особливого акценту</label>
 
-  <input type="radio" id="q1d" name="q1" value="negative">
+  <input type="radio" id="q1d" name="q1" value="Негативно ставлюся — вважаю це марною темою">
   <label class="option" for="q1d">Негативно ставлюся — вважаю це марною темою</label>
 
-  <!-- Питання 2 -->
   <p>2. Якщо б у вас була можливість вибору, ви б робили робототехніку:</p>
-  <input type="radio" id="q2a" name="q2" value="mandatory">
+  <input type="radio" id="q2a" name="q2" value="Обов’язковим елементом навчальної програми">
   <label class="option" for="q2a">Обов’язковим елементом навчальної програми</label>
 
-  <input type="radio" id="q2b" name="q2" value="optional_club">
+  <input type="radio" id="q2b" name="q2" value="Лише факультативним гуртком">
   <label class="option" for="q2b">Лише факультативним гуртком</label>
 
-  <input type="radio" id="q2c" name="q2" value="for_interested">
+  <input type="radio" id="q2c" name="q2" value="Лише для зацікавлених учнів">
   <label class="option" for="q2c">Лише для зацікавлених учнів</label>
 
-  <input type="radio" id="q2d" name="q2" value="none">
+  <input type="radio" id="q2d" name="q2" value="Не робила/не робив би взагалі">
   <label class="option" for="q2d">Не робила/не робив би взагалі</label>
 
-  <!-- Питання 3 -->
   <p>3. Що, на вашу думку, більше відштовхує вчителів від робототехніки?</p>
-  <input type="radio" id="q3a" name="q3" value="resources">
+  <input type="radio" id="q3a" name="q3" value="Складність у підготовці та ресурсах">
   <label class="option" for="q3a">Складність у підготовці та ресурсах</label>
 
-  <input type="radio" id="q3b" name="q3" value="method_support">
+  <input type="radio" id="q3b" name="q3" value="Недостатня методична підтримка">
   <label class="option" for="q3b">Недостатня методична підтримка</label>
 
-  <input type="radio" id="q3c" name="q3" value="play_only">
+  <input type="radio" id="q3c" name="q3" value="Впевненість, що це «гра», а не навчання">
   <label class="option" for="q3c">Впевненість, що це «гра», а не навчання</label>
 
-  <input type="radio" id="q3d" name="q3" value="personal">
+  <input type="radio" id="q3d" name="q3" value="Особисте небажання змінювати стиль викладання">
   <label class="option" for="q3d">Особисте небажання змінювати стиль викладання</label>
 
-  <!-- Питання 4 -->
   <p>4. Як ви реагуєте на ідею інтеграції робототехніки з програмуванням та STEM-проєктами?</p>
-  <input type="radio" id="q4a" name="q4" value="priority">
+  <input type="radio" id="q4a" name="q4" value="Це моя пріоритетна мета — роблю все можливе">
   <label class="option" for="q4a">Це моя пріоритетна мета — роблю все можливе</label>
 
-  <input type="radio" id="q4b" name="q4" value="cautious">
+  <input type="radio" id="q4b" name="q4" value="Зацікавлена/зацікавлений, але обережно">
   <label class="option" for="q4b">Зацікавлена/зацікавлений, але обережно</label>
 
-  <input type="radio" id="q4c" name="q4" value="skeptical">
+  <input type="radio" id="q4c" name="q4" value="Скептично ставлюся — сумнівна користь">
   <label class="option" for="q4c">Скептично ставлюся — сумнівна користь</label>
 
-  <input type="radio" id="q4d" name="q4" value="against">
+  <input type="radio" id="q4d" name="q4" value="Категорично проти — вважаю зайвим">
   <label class="option" for="q4d">Категорично проти — вважаю зайвим</label>
 
-  <!-- Питання 5 -->
   <p>5. Який головний ваш мотив для роботи з робототехнікою?</p>
-  <input type="radio" id="q5a" name="q5" value="motivate_students">
+  <input type="radio" id="q5a" name="q5" value="Підвищення мотивації та зацікавленості учнів">
   <label class="option" for="q5a">Підвищення мотивації та зацікавленості учнів</label>
 
-  <input type="radio" id="q5b" name="q5" value="self_development">
+  <input type="radio" id="q5b" name="q5" value="Розвиток власної компетентності та навичок">
   <label class="option" for="q5b">Розвиток власної компетентності та навичок</label>
 
-  <input type="radio" id="q5c" name="q5" value="program_requirement">
+  <input type="radio" id="q5c" name="q5" value="Виконання вимог адміністрації чи програми">
   <label class="option" for="q5c">Виконання вимог адміністрації чи програми</label>
 
-  <input type="radio" id="q5d" name="q5" value="no_motivation">
+  <input type="radio" id="q5d" name="q5" value="Немає мотиву — це не для мене">
   <label class="option" for="q5d">Немає мотиву — це не для мене</label>
 
   <button type="submit">Відправити</button>
 </form>
+
+<div id="results" style="display:none;">
+  <h3>Статистика відповідей групи:</h3>
+  <div id="stats"></div>
+</div>
+
+<script>
+const counts = {
+  q1: {}, q2: {}, q3: {}, q4: {}, q5: {}
+};
+
+document.getElementById('surveyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const statsDiv = document.getElementById('stats');
+  statsDiv.innerHTML = '';
+
+  for (let i=1; i<=5; i++) {
+    const name = 'q'+i;
+    const selected = document.querySelector(`input[name="${name}"]:checked`);
+    const val = selected ? selected.value : 'Не обрано';
+
+    if (!counts[name][val]) counts[name][val] = 0;
+    counts[name][val] += 1;
+
+    const section = document.createElement('div');
+    section.innerHTML = `<strong>Питання ${i}:</strong>`;
+    const ul = document.createElement('ul');
+    for (const [option, num] of Object.entries(counts[name])) {
+      const li = document.createElement('li');
+      li.textContent = `${option} — ${num} вибір(ів)`;
+      ul.appendChild(li);
+    }
+    section.appendChild(ul);
+    statsDiv.appendChild(section);
+  }
+
+  document.getElementById('results').style.display = 'block';
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+});
+</script>
 
 </body>
 </html>
